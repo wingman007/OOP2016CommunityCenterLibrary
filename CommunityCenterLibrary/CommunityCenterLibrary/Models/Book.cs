@@ -19,5 +19,6 @@ namespace CommunityCenterLibrary.Models
     public class BookDBContext : DbContext
     {
         public DbSet<Book> Books { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
