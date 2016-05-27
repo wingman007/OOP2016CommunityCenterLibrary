@@ -13,5 +13,7 @@ namespace CommunityCenterLibrary.Models
         public DateTime Age { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual ICollection<Book> Books { get; set; }
     }
 }
