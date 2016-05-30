@@ -46,7 +46,9 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
-
+.jumbotron{
+    background-image:url(header.jpeg);
+}
 [hidden] {
   display: none;
 }
@@ -59,6 +61,7 @@ html {
 
 body {
   margin: 0;
+  background-color:darkred;
 }
 
 a:focus {

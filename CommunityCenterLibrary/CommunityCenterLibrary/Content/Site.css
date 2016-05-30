@@ -1,6 +1,9 @@
-﻿body {
+﻿@import url(https://fonts.googleapis.com/css?family=Pacifico);
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image:url(paperr.jpg);
+    background-size: 1350px 760px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -20,6 +23,42 @@ textarea {
 .field-validation-error {
     color: #b94a48;
 }
+.jumbotron{
+    background-image:url(heartbook.jpg );
+      background-size: 1180px 260px;
+    
+}
+.jumbotron h1 {
+    padding-bottom:30px;
+    margin-top: -20px;
+      color:   #fff2e6;
+      font-family:'Times New Roman';
+   
+}
+.jumbotron p {
+    font-family: 'Pacifico', cursive;
+    color: #bf8040;
+    text-align:right;
+}
+.navbar.navbar-inverse.navbar-fixed-top{
+    background-image:url(wood.png);
+    background-size: 1180px 60px;
+    color:white;
+    
+}
+.navbar.navbar-inverse.navbar-fixed-top li a{
+    font-family:'Times New Roman';
+    font-size:13pt;
+    color:#fff;
+}
+.navbar-brand {
+    font-size:20pt;
+    color: #d9b38c;
+}               
+.col-md-4{
+    height:300px;
+}
+               
 
 .field-validation-valid {
     display: none;
