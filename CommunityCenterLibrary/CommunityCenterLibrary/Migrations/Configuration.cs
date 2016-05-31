@@ -27,6 +27,8 @@ namespace CommunityCenterLibrary.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            // BlackHeart was here!
         }
     }
 }
