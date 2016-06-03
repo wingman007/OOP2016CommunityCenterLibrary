@@ -25,7 +25,11 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Books", "Index", "Books")</li>  <!--if{Request.IsAuthenticated  - shows the controller only if you are logged in}-->
-                    <li>@Html.ActionLink("Clients", "Index", "Clients")</li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Clients", "Index", "Clients")</li>
+                    }
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

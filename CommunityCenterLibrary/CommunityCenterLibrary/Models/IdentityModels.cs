@@ -16,6 +16,8 @@ namespace CommunityCenterLibrary.Models
         public ApplicationDbContext()
             : base("DefaultConnection")
         {
+            //Configuration.LazyLoadingEnabled = false;
+            //Configuration.ProxyCreationEnabled = false;
         }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Book> Books { get; set; }
