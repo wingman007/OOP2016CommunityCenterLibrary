@@ -15,9 +15,10 @@ namespace CommunityCenterLibrary.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: /Books/
-        public ActionResult Index()
+        public ActionResult Index(int id2 = 0)
         {
-            return View(db.Books.ToList());
+            var books = db.Books.Where(c => c. == id2);
+            return View(books.ToList());
         }
 
         // GET: /Books/Details/5

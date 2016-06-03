@@ -22,10 +22,14 @@ namespace CommunityCenterLibrary.Controllers
         {
             var id = User.Identity.GetUserId();
             //1. Using where method
-            var contactsByUserId = db.Clients.Where(c => c.ApplicationUser.Id == id);
+            //var clientsByUserId = db.Clients.Where(c => c.ApplicationUser.Id == id);
             //return View(db.Clients.ToList());
+            //2. LINQ
+            IEnumerable<Client> clientsByUserId = from c in db.Clients
+                                                   where c.ApplicationUser.Id == id
+                                                   select c;
 
-            return View(contactsByUserId.ToList());
+            return View(clientsByUserId.ToList());
         }
 
         // GET: /Clients/Details/5
