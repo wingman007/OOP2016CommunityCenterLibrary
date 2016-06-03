@@ -17,12 +17,13 @@ namespace CommunityCenterLibrary.Controllers
         // GET: /Books/
         public ActionResult Index(int id2 = 0)
         {
-            var books = db.Books.Where(c => c. == id2);
+            var books = db.Books.Where(c => c.Id == id2);
+            ViewBag.id2 = id2;
             return View(books.ToList());
         }
 
         // GET: /Books/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id, int id2 = 0)
         {
             if (id == null)
             {
@@ -33,6 +34,7 @@ namespace CommunityCenterLibrary.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.id2 = id2;
             return View(book);
         }
 
