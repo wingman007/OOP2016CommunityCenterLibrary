@@ -17,7 +17,8 @@ namespace CommunityCenterLibrary.Controllers
         // GET: /Books/
         public ActionResult Index(int id2 = 0)
         {
-            var books = db.Books.Where(c => c. == id2);
+            var books = db.Books.Where(c => c.ClientId==id2);
+            ViewBag.id2 = id2;
             return View(books.ToList());
         }
 
