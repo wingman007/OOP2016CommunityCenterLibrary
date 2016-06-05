@@ -10,11 +10,13 @@ using CommunityCenterLibrary.Models;
 
 namespace CommunityCenterLibrary.Controllers
 {
+    [Authorize(Users="admin")]
     public class BooksController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: /Books/
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Books.ToList());
