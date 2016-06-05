@@ -14,10 +14,9 @@ namespace CommunityCenterLibrary.Controllers
     public class BooksController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
-        // GET: /Books/
         [AllowAnonymous]
-        public ActionResult Index()
+        // GET: /Books/
+        public ActionResult Index(int id2=0)
         {
             var books = db.Books.Where(c => c.Id == id2);
             ViewBag.id2 = id2;

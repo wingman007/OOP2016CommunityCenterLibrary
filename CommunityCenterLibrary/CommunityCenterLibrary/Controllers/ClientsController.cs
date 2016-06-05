@@ -7,9 +7,12 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CommunityCenterLibrary.Models;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.AspNet.Identity;
 
 namespace CommunityCenterLibrary.Controllers
 {
+    [Authorize]
     public class ClientsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -17,7 +20,16 @@ namespace CommunityCenterLibrary.Controllers
         // GET: /Clients/
         public ActionResult Index()
         {
-            return View(db.Clients.ToList());
+            var id = User.Identity.GetUserId();
+            //1. Using where method
+            //var clientsByUserId = db.Clients.Where(c => c.ApplicationUser.Id == id);
+            //return View(db.Clients.ToList());
+            //2. LINQ
+            IEnumerable<Client> clientsByUserId = from c in db.Clients
+                                                   where c.ApplicationUser.Id == id
+                                                   select c;
+
+            return View(clientsByUserId.ToList());
         }
 
         // GET: /Clients/Details/5
@@ -28,6 +40,11 @@ namespace CommunityCenterLibrary.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Client client = db.Clients.Find(id);
+            var userId = User.Identity.GetUserId();
+            if (client.ApplicationUser.Id != userId)
+            {
+                return RedirectToAction("Index");
+            }
             if (client == null)
             {
                 return HttpNotFound();
@@ -50,6 +67,8 @@ namespace CommunityCenterLibrary.Controllers
         {
             if (ModelState.IsValid)
             {
+                var id = User.Identity.GetUserId();
+                client.ApplicationUser = db.Users.Find(id);
                 db.Clients.Add(client);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -66,6 +85,11 @@ namespace CommunityCenterLibrary.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Client client = db.Clients.Find(id);
+            var userId = User.Identity.GetUserId();
+            if (client.ApplicationUser.Id != userId)
+            {
+                return RedirectToAction("Index");
+            }
             if (client == null)
             {
                 return HttpNotFound();
@@ -97,6 +121,11 @@ namespace CommunityCenterLibrary.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Client client = db.Clients.Find(id);
+            var userId = User.Identity.GetUserId();
+            if (client.ApplicationUser.Id != userId)
+            {
+                return RedirectToAction("Index");
+            }
             if (client == null)
             {
                 return HttpNotFound();
