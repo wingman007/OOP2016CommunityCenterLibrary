@@ -39,8 +39,12 @@ namespace CommunityCenterLibrary.Controllers
         }
 
         // GET: /Books/Create
-        public ActionResult Create()
+        public ActionResult Create(int id2=0)
         {
+            ViewBag.ContactId = new SelectList(db.Books, "Id", "Name");
+            //var id = User.Identity.GetUserId();
+
+            ViewBag.id2 = id2;
             return View();
         }
 
