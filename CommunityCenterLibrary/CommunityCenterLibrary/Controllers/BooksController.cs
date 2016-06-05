@@ -10,12 +10,13 @@ using CommunityCenterLibrary.Models;
 
 namespace CommunityCenterLibrary.Controllers
 {
+    [Authorize(Users="admin")]
     public class BooksController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        [AllowAnonymous]
         // GET: /Books/
-        public ActionResult Index(int id2 = 0)
+        public ActionResult Index(int id2=0)
         {
             var books = db.Books.Where(c => c.Id == id2);
             ViewBag.id2 = id2;
