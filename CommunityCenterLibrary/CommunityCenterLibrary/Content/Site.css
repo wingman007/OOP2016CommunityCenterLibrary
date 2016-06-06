@@ -1,0 +1,104 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Pacifico);
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image:url(paperr.jpg);
+    background-size: 1350px 760px;
+
+   /* background: rgba(244,227,199,1);/* Old Browsers 7
+background: -moz-linear-gradient(left, rgba(244,227,199,1) 0%, rgba(244,227,199,0.99) 14%, rgba(185,143,75,0.99) 23%, rgba(102,51,0,0.97) 78%, rgba(234,213,179,0.96) 90%, rgba(234,213,179,0.96) 100%); /* FF3.6+ 
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(244,227,199,1)), color-stop(14%, rgba(244,227,199,0.99)), color-stop(23%, rgba(185,143,75,0.99)), color-stop(78%, rgba(102,51,0,0.97)), color-stop(90%, rgba(234,213,179,0.96)), color-stop(100%, rgba(234,213,179,0.96)));/* Chrome, Safari4+ 
+background: -webkit-linear-gradient(left, rgba(244,227,199,1) 0%, rgba(244,227,199,0.99) 14%, rgba(185,143,75,0.99) 23%, rgba(102,51,0,0.97) 78%, rgba(234,213,179,0.96) 90%, rgba(234,213,179,0.96) 100%); /* Chrome10+,Safari5.1+ 
+background: -o-linear-gradient(left, rgba(244,227,199,1) 0%, rgba(244,227,199,0.99) 14%, rgba(185,143,75,0.99) 23%, rgba(102,51,0,0.97) 78%, rgba(234,213,179,0.96) 90%, rgba(234,213,179,0.96) 100%); /* Opera 11.10+ 
+background: -ms-linear-gradient(left, rgba(244,227,199,1) 0%, rgba(244,227,199,0.99) 14%, rgba(185,143,75,0.99) 23%, rgba(102,51,0,0.97) 78%, rgba(234,213,179,0.96) 90%, rgba(234,213,179,0.96) 100%); /* IE 10+ 
+background: linear-gradient(to right, rgba(244,227,199,1) 0%, rgba(244,227,199,0.99) 14%, rgba(185,143,75,0.99) 23%, rgba(102,51,0,0.97) 78%, rgba(234,213,179,0.96) 90%, rgba(234,213,179,0.96) 100%);/* W3C 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4e3c7', endColorstr='#ead5b3', GradientType=1 );/* IE6-9 */
+
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+.jumbotron{
+    background-image:url(heartbook.jpg );
+      background-size: 1180px 260px;
+     /* background: rgb(243,226,199); /* Old browsers 
+background: -moz-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(233,212,179,1) 83%); /* FF3.6-15 
+background: -webkit-linear-gradient(top, rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(233,212,179,1) 83%); /* Chrome10-25,Safari5.1-6
+background: linear-gradient(to bottom, rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(233,212,179,1) 83%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    
+}
+.jumbotron h1 {
+    padding-bottom:30px;
+    margin-top: -20px;
+      color:   #fff2e6;
+      font-family:'Times New Roman';
+   
+}
+.jumbotron p {
+    font-family: 'Pacifico', cursive;
+    color: #bf8040;
+    text-align:right;
+}
+.navbar.navbar-inverse.navbar-fixed-top{
+    background-image:url(wood.png);
+    background-size: 1180px 60px;
+    color:white;
+    
+}
+.navbar.navbar-inverse.navbar-fixed-top li a{
+    font-family:'Times New Roman';
+    font-size:13pt;
+    color:#fff;
+}
+    .navbar.navbar-inverse.navbar-fixed-top li a:hover {
+        text-shadow: 3px 0px 5px rgba(255,249,253,1);
+        color:black;
+        font-size:20pt;
+
+    }
+
+.navbar-brand {
+    font-size:20pt;
+    color: black;
+    
+}               
+.col-md-4{
+    height:300px;
+}
+               
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
